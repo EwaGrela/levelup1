@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+<ul>
+	<li>
+		<h2>Request method</h2>
+		<p>{{request.method}}</p>
+	</li>
+	<li>
+		<h2>Request url</h2>
+		<p>{{request.url}}</p>
+	</li>
+	<li>
+		<h2>Request headers</h2>
+		<p>{{request.headers}}</p>
+	</li>
+</ul>
+<a href="{{url_for('index')}}" class="btn btn-primary btn-large">get back home xD</a>
+{% endblock %} 

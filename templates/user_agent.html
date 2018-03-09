@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="jumbotron">
+	<h2>You are running on:
+		<span>
+			{{request.user_agent}}
+		</span>
+	</h2>
+	<a href="{{url_for('index')}}" class="btn btn-primary btn-large">get back home xD</a>
+</div>
+
+{% endblock %}

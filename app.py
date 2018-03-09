@@ -1,4 +1,5 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, url_for
+import datetime
 
 app = Flask(__name__)
 
@@ -12,14 +13,28 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-	return render_template("index.html")
+	title ="Flask app"
+	return render_template("index.html", title=title)
 
 
 
 
 @app.route("/request")
 def request_info():
-	return "request method {}, request url: {}, request headers:{}".format(request.method, request.url, request.headers)
+	title ="Request"
+	return render_template("request_info.html", title=title)
+
+@app.route("/now")
+def now():
+	title ="Now"
+	time = datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S.%f")
+	# datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S.%f")
+	return render_template("now.html", time=time, title=title)
+
+@app.route("/user_agent")
+def user_agent():
+	title = "User agent"
+	return render_template("user_agent.html", title=title)
 
 #this always at the end
 if __name__ == '__main__':

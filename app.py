@@ -36,6 +36,16 @@ def user_agent():
 	title = "User agent"
 	return render_template("user_agent.html", title=title)
 
+@app.route("/count")
+def count():
+	with open("count.txt", "r") as g:
+		count = g.read()
+		count = int(count)
+		print(type(count))
+	with open("count.txt", "w") as h:
+		h.write(str(count+1))
+	return render_template("count.html", count=count)
+
 #this always at the end
 if __name__ == '__main__':
     app.run(debug=True) 

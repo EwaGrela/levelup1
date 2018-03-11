@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
-<ul>
+<h1 class="page-header">Request info:</h1>
+<ul class="request-info-list">
 	<li>
 		<h2>Request method</h2>
 		<p>{{request.method}}</p>
@@ -14,5 +15,8 @@
 		<p>{{request.headers}}</p>
 	</li>
 </ul>
-<a href="{{url_for('index')}}" class="btn btn-primary btn-large">get back home xD</a>
+<a href="{{url_for('index')}}" class="btn btn-default btn-large">
+	back home
+	<span class="glyphicon glyphicon-home"></span>
+	</a>
 {% endblock %} 

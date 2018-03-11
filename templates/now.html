@@ -1,10 +1,14 @@
 {% extends 'base.html' %}
 {% block content %}
 <div class="jumbotron">
-	<h2>It is:<span>
+	<h1 class="page-header">It is:<span  class="emphasis">
 		
 			{{ time }}
 		
-	</span></h2>
+	</span></h1>
+<a href="{{url_for('index')}}" class="btn btn-default btn-large">
+	back home
+	<span class="glyphicon glyphicon-home"></span>
+</a>
 </div>
 {% endblock %}

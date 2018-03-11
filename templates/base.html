@@ -2,25 +2,45 @@
 <html>
 <head>
 	<title>{{title}}</title>
-	<!-- Latest compiled and minified CSS -->
+<!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
 <!-- Optional theme -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<!-- FONTS -->
+<link href="https://fonts.googleapis.com/css?family=Mina|Raleway" rel="stylesheet"> 
+<!-- CUSTOM CSS -->
+<link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
 </head>
 <body>
 	<nav class="navbar navbar-inverse">
-		<ul class="nav navbar-nav">
-			<li><a href="{{url_for('now')}}">now</a></li>
-			<li><a href="{{url_for('request_info')}}">request_info</a></li>
-			<li><a href="{{url_for('user_agent')}}">user_agent</a></li>
-			<li><a href="{{url_for('index')}}">home</a></li>
-			<li><a href="{{url_for('count')}}">count</a></li>
-		</ul>
+		<div class="container-fluid">
+			<div class="navbar-header">
+		      	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navi">
+			        <span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+		      	</button>
+	    	</div>
+		<a class="navbar-brand" href="{{url_for('index')}}">
+				<span class="glyphicon glyphicon-home"></span>
+			</a>
+			<div class="collapse navbar-collapse" id="navi">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a class="list-item" href="{{url_for('now')}}">now</a></li>
+					<li><a  class="list-item" href="{{url_for('request_info')}}">request_info</a></li>
+					<li><a class="list-item" href="{{url_for('user_agent')}}">user_agent</a></li>
+					<li><a class="list-item" href="{{url_for('count')}}">count</a></li>
+				</ul>
+			</div>
+		</div>
 	</nav>
 	<div class="container">
 	{% block content %}
 	{% endblock %}
 	</div>	
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
 </html>

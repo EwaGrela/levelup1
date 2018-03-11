@@ -36,7 +36,7 @@ def user_agent():
 	title = "User agent"
 	return render_template("user_agent.html", title=title)
 
-@app.route("/count")
+@app.route("/counter")
 def count():
 	with open("count.txt", "r") as g:
 		count = g.read()

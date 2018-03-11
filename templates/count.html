@@ -1,6 +1,10 @@
 {% extends 'base.html' %}
 {% block content %}
 	<div class="jumbotron">
-		<h3>Visits counter: {{count}} visits to the website</h3>
+		<h1 class="page-header">Visits counter: <span class="emphasis">{{count}}</span> visits to the website</h1>
+		<a href="{{url_for('index')}}" class="btn btn-default btn-large">
+			back home
+			<span class="glyphicon glyphicon-home"></span>
+		</a>
 	</div>
 {% endblock %}

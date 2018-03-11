@@ -1,0 +1,57 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #efefef;
+}
+
+.jumbotron {
+	font-family: "Raleway", sans-serif;
+	color: #555;
+}
+
+.glyphicon {
+	color: #ffffff;
+	text-shadow: 1px 2px 1px black;
+}
+.btn>.glyphicon {
+	color: #666;
+}
+
+.navbar-brand {
+	font-family: 'Mina', sans-serif;
+	color: #fefefe;
+}
+
+.navbar-inverse .navbar-nav > li > a{
+	color: #efefef;
+}
+.navbar-inverse .navbar-nav > li > a:hover {
+	text-decoration: underline;
+	font-weight: bolder;
+}
+.list-item {
+	font-family: 'Mina', sans-serif;
+	font-weight: bolder;
+}
+
+.request-info-list {
+	list-style: none;	
+}
+
+.request-info-list p{
+	font-family: "Raleway", sans-serif;
+}
+.request-info-list h2{
+	font-family: "Mina", sans-serif;
+}
+
+.page-header {
+	font-family: "Mina", sans-serif;
+}
+.emphasis {
+	font-weight: bolder;
+}

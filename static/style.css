@@ -5,7 +5,7 @@
 }
 
 body {
-	background-color: #005656;
+	background-color: #fefefe;
 }
 
 .jumbotron {
@@ -36,6 +36,9 @@ body {
 .list-item {
 	font-family: 'Mina', sans-serif;
 	font-weight: bolder;
+}
+.list-group-item {
+	height: auto;
 }
 
 .request-info-list {

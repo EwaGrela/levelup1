@@ -1,12 +1,13 @@
 {% extends 'base.html' %}
 {% block content %}
 <div class="jumbotron">
-	<h2 class="page-header">You are running on:
-		<span>
-			{{request.user_agent}}
-		</span>
+	<h2 class="page-header">Your user-agent info:
+		<span class="emphasis">{{ ua }}</span>
 	</h2>
-	<a href="{{url_for('index')}}" class="btn btn-primary btn-large">get back home xD</a>
+	<a href="{{url_for('index')}}" class="btn btn-default btn-large">
+	back home
+		<span class="glyphicon glyphicon-home"></span>
+	</a>
 </div>
 
 {% endblock %}

@@ -3,20 +3,20 @@
 <h1 class="page-header">Request info:</h1>
 <ul class="request-info-list">
 	<li>
-		<h2>Request method</h2>
+		<h3>Request method</h3>
 		<p>{{request.method}}</p>
 	</li>
 	<li>
-		<h2>Request url</h2>
+		<h3>Request url</h3>
 		<p>{{request.url}}</p>
 	</li>
 	<li>
-		<h2>Request headers</h2>
+		<h3>Request headers</h3>
 		<p>{{request.headers}}</p>
 	</li>
 </ul>
 <a href="{{url_for('index')}}" class="btn btn-default btn-large">
 	back home
 	<span class="glyphicon glyphicon-home"></span>
-	</a>
+</a>
 {% endblock %} 

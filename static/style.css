@@ -55,3 +55,6 @@ body {
 .emphasis {
 	font-weight: bolder;
 }
+.italics-emphasis {
+	font-style: italic;
+}
